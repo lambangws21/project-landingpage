@@ -76,7 +76,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="hidden md:flex absolute left-2/4 bottom-48 md:bottom-12 lg:hidden animate-bounce">
+        <div className="hidden md:flex absolute left-2/4 bottom-48 md:bottom-12 lg:hidden xl:hidden animate-bounce">
           <RiArrowDownLine className="text-3xl text-primary dark:bg-accent rounded-full bg-accent" />
         </div>
       </div>
