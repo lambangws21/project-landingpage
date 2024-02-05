@@ -97,6 +97,10 @@ const About = () => {
     <div className="continer mx-auto">
       <h2 className="about-section mb-8 xl:mb-16 text-center ">About Us</h2>
     </div>
+    {/* image */}
+    <div>
+      <NersImg containerStyles="bg-about_image w-[505px] h-[505px]"/>
+    </div>
   </section>;
 };
 
