@@ -15,7 +15,7 @@ const MobileNavbar = () => {
           <div className="flex flex-col items-center gap-y-32">
             <Logo />
             <Navbar
-              containerStyles="flex flex-col gap-y-5 items-center mt-10"
+              containerStyles="flex flex-col gap-y-5 items-center"
               linkStyles="text-2xl font-semibold"
             />
           </div>

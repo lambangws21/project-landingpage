@@ -63,4 +63,7 @@
     @apply z-10 w-[200px] bg-white h-[68px] dark:backdrop-blur-[44px] shadow-2xl p-4 rounded-[18px]
  flex items-center gap-x-4;
   }
+  .about-section {
+    @apply text-4xl font-bold relative w-full flex items-center justify-center gap-x-3 before:bg-center before:bg-dots_light before:dark:bg-dots_dark before:bg-no-repeat before:w-[24px] before:h-[24px]
+  }
 }

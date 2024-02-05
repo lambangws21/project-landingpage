@@ -93,7 +93,11 @@ const skillData = [
 ];
 
 const About = () => {
-  return <div>About</div>;
+  return <section>
+    <div className="continer mx-auto">
+      <h2 className="about-section mb-8 xl:mb-16 text-center ">About Us</h2>
+    </div>
+  </section>;
 };
 
 export default About;
