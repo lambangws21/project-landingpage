@@ -56,6 +56,15 @@
   body {
     @apply bg-background text-foreground;
   }
+  .h3{
+    @apply text-3xl font-bold;
+  }
+  .h4{
+    @apply text-[22px] font-semibold;
+  }
+  .title{
+    @apply text-muted-foreground text-lg mb-8 font-light;
+  }
   .btn-contact {
     @apply text-muted-foreground text-lg mb-8 font-light;
   }

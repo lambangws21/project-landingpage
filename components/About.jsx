@@ -93,7 +93,7 @@ const skillData = [
 
 const About = () => {
   return (
-    <section className="md:h-[868px] pb-12 md:py-24">
+    <section className="md:h-[868px] pb-12 md:py-10">
       <div className="container mx-auto">
         <h2 className="about-section mb-8 md:mb-16 text-center ">About Us</h2>
       </div>
@@ -108,13 +108,18 @@ const About = () => {
         {/* tabs */}
         <div className="flex-1">
           <Tabs defaultValue="personal">
-            <TabsList>
-              <TabsTrigger value="personal">Personal Info</TabsTrigger>
-              <TabsTrigger value="qualifications">Qualifications</TabsTrigger>
-              <TabsTrigger value="skills">Skills</TabsTrigger>
+            <TabsList className="w-full grid md:grid-cols-3 xl:max-w-[520px] xl:border dark:border-none">
+              <TabsTrigger className="w-[162px] xl:w-auto" value="personal">Personal Info</TabsTrigger>
+              <TabsTrigger className="w-[162px] xl:w-auto" value="qualifications">Qualifications</TabsTrigger>
+              <TabsTrigger className="w-[162px] xl:w-auto" value="skills">Skills</TabsTrigger>
             </TabsList>
             <div className="text-lg mt-12 md:mt-8">
-              <TabsContent value="personal">Personal Info</TabsContent>
+              <TabsContent value="personal">
+                <div className="">
+                  <h3 className="h3 mb-4"> Unmacthed service Quality for the best care</h3>
+                  <p className="title max-w-xl max-auto xl:mx-0" >I Spesialize in care giver and care taker. I have over 5 years of experience </p>
+                </div>
+              </TabsContent>
               <TabsContent value="qualifications">Qualifications Info</TabsContent>
               <TabsContent value="skills">Skill Info</TabsContent>
             </div>
