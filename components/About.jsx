@@ -93,7 +93,7 @@ const skillData = [
 
 const About = () => {
   return (
-    <section className="md:h-[868px] pb-12 md:py-10">
+    <section className="md:h-[868px] pb-12 md:py-10 mt-10 md:mt-1">
       <div className="container mx-auto">
         <h2 className="about-section mb-8 md:mb-16 text-center ">About Us</h2>
       </div>
@@ -109,18 +109,45 @@ const About = () => {
         <div className="flex-1">
           <Tabs defaultValue="personal">
             <TabsList className="w-full grid md:grid-cols-3 xl:max-w-[520px] xl:border dark:border-none">
-              <TabsTrigger className="w-[162px] xl:w-auto" value="personal">Personal Info</TabsTrigger>
-              <TabsTrigger className="w-[162px] xl:w-auto" value="qualifications">Qualifications</TabsTrigger>
-              <TabsTrigger className="w-[162px] xl:w-auto" value="skills">Skills</TabsTrigger>
+              <TabsTrigger className="w-[162px] xl:w-auto" value="personal">
+                Personal Info
+              </TabsTrigger>
+              <TabsTrigger
+                className="w-[162px] xl:w-auto"
+                value="qualifications"
+              >
+                Qualifications
+              </TabsTrigger>
+              <TabsTrigger className="w-[162px] xl:w-auto" value="skills">
+                Skills
+              </TabsTrigger>
             </TabsList>
             <div className="text-lg mt-12 md:mt-8">
               <TabsContent value="personal">
-                <div className="">
-                  <h3 className="h3 mb-4"> Unmacthed service Quality for the best care</h3>
-                  <p className="title max-w-xl max-auto xl:mx-0" >I Spesialize in care giver and care taker. I have over 5 years of experience </p>
+                <div className="text-center xl:text-left">
+                  <h3 className="h3 mb-4">
+                    {" "}
+                    Unmacthed service Quality for the best care
+                  </h3>
+                  <p className="title max-w-xl max-auto xl:mx-0">
+                    I Spesialize in care giver and care taker. I have over 5
+                    years of experience{" "}
+                  </p>
+                  <div className="grid xl:grid-cols-2 gap-4 mb-12 ">
+                    {infoData.map((item, index) => {
+                      return (
+                        <div key={index} className="flex gap-x-4 mx-auto xl:mx-0">
+                          <div className="text-primaty">{item.icon}</div>
+                          <div>{item.text}</div>
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
               </TabsContent>
-              <TabsContent value="qualifications">Qualifications Info</TabsContent>
+              <TabsContent value="qualifications">
+                Qualifications Info
+              </TabsContent>
               <TabsContent value="skills">Skill Info</TabsContent>
             </div>
           </Tabs>

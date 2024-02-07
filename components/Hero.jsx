@@ -19,17 +19,17 @@ const Hero = () => {
         <div className="flex justify-between gap-x-8">
           {/*Text*/}
           <div className="flex flex-col items-center justify-center mx-auto max-w-[700px] md:mx-0 text-center md:text-right">
-            <h1 className="text-6xl md:text-7xl font-bold md:text-left leading-none text-center">
+            <h1 className="text-7xl md:text-8xl font-bold md:text-left leading-[1.1] text-center">
               Your <span className="text-primary">Health</span>, <br /> is Our
               Top Priority.
             </h1>
-            <p className="mt-2 mb-4 max-w-[590px] mx-auto font-medium md:mx-0 md:text-start md:-ml-0 sm:ml-0 xl:-ml-14 tracking-normal">
+            <p className="mt-2 mb-20 max-w-[590px] mx-auto font-medium md:mx-0 md:text-start md:-ml-0 sm:ml-0 xl:-ml-14 tracking-normal">
               Your health, our priority. Discover personalized care at Nursecare
               for a happier, healthier you!
             </p>
             {/* Button */}
             <div className="btn-contact w-full md:flex">
-              <Link href="/contact gap-x-3">
+              <Link href="/contact">
                 <Button className="dark:text-white gap-x-2 w-64 text-lg ">
                   Contact Us <Send size={18} />
                 </Button>
