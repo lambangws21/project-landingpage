@@ -2,10 +2,10 @@
 module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{js,jsx}',
-    './components/**/*.{js,jsx}',
-    './app/**/*.{js,jsx}',
-    './src/**/*.{js,jsx}',
+    "./pages/**/*.{js,jsx}",
+    "./components/**/*.{js,jsx}",
+    "./app/**/*.{js,jsx}",
+    "./src/**/*.{js,jsx}",
   ],
   prefix: "",
   theme: {
@@ -78,10 +78,10 @@ module.exports = {
         hero_dark: "url('/hero/shape-2-dark.svg')",
         dots_light: "url('/dots-light.svg')",
         dots_dark: "url('/dots-dark.svg')",
-        about_image:"url ('/about/about-image.svg')"
-      }
-
+        about_light: "url ('/about/about-light.svg')",
+        about_dark: "url('/about/about-dark.svg')",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};

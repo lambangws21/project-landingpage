@@ -6,7 +6,6 @@ import {
   MailIcon,
   PhoneCallIcon,
   Calendar,
-  Briefcase,
   GraduationCapIcon,
 } from "lucide-react";
 
@@ -87,21 +86,43 @@ const skillData = [
       },
       {
         name: "Pelayanan secara efektif, komunikasi efektif, pemasangan infus, pemberian infus ",
-      }, 
+      },
     ],
   },
 ];
 
 const About = () => {
-  return <section>
-    <div className="continer mx-auto">
-      <h2 className="about-section mb-8 xl:mb-16 text-center ">About Us</h2>
-    </div>
-    {/* image */}
-    <div>
-      <NersImg containerStyles="bg-about_image w-[505px] h-[505px]"/>
-    </div>
-  </section>;
+  return (
+    <section className="md:h-[868px] pb-12 md:py-24">
+      <div className="container mx-auto">
+        <h2 className="about-section mb-8 md:mb-16 text-center ">About Us</h2>
+      </div>
+      {/* image */}
+      <div className="flex flex-col md:flex-row">
+        <div className="hidden md:flex flex-1 relative">
+          <NersImg
+            containerStyles="bg-about_light dark:bg-about_dark w-[505px] h-[505px] relative bg-no-repeat"
+            imgSrc="/about/about-image.svg"
+          />
+        </div>
+        {/* tabs */}
+        <div className="flex-1">
+          <Tabs defaultValue="personal">
+            <TabsList>
+              <TabsTrigger value="personal">Personal Info</TabsTrigger>
+              <TabsTrigger value="qualifications">Qualifications</TabsTrigger>
+              <TabsTrigger value="skills">Skills</TabsTrigger>
+            </TabsList>
+            <div className="text-lg mt-12 md:mt-8">
+              <TabsContent value="personal">Personal Info</TabsContent>
+              <TabsContent value="qualifications">Qualifications Info</TabsContent>
+              <TabsContent value="skills">Skill Info</TabsContent>
+            </div>
+          </Tabs>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default About;
