@@ -151,11 +151,7 @@ const About = () => {
                     })}
                   </div>
                   <div className="flex flex-col gap-y-2">
-<<<<<<< HEAD
                     <div className="text-primary"> Services </div>
-=======
-                    <div className="text-primary">Skills </div>
->>>>>>> 51754713506d4db52faab801e8709566143f4f74
                     <div className="border-b border-border"></div>
                     <div className="">Infus, Care Giver and Care Taker</div>
                   </div>
@@ -172,45 +168,34 @@ const About = () => {
                       {getData(qualificationsData, "experience").title}
                     </h4>
                   </div>
-<<<<<<< HEAD
-                <div className="flex flex-col gap-y-4 mt-2">
-                  {getData(qualificationsData, "experience").data.map(
-                    (item, index) => {
-                      const {university, role, years} = item;
-                      return (
-                        <div className="flex gap-x-8 group bg-yellow-100 dark:bg-slate-800 p-4 rounded-xl" key={index}>
-                          <div className="h-[82px] w-[1px] bg-border relative ml-2">
-                            <div className="w-[11px] h-[11px] bg-primary rounded-full absolute top-[-5px] -left-[5px] group-hover:translate-y-[84px] transition-all duration-700"></div>
-                          </div>
-                          <div>
-                            <div className="font-semibold text-xl leading-none mb-4 dark:text-slate-100 ">{university}</div>
-                            <div className="text-lg leading-none text-muted-foreground mb-2 dark:text-slate-50">{role}</div>
-                            <div className="text-base font-medium dark:text-primary" >{years}</div>
-                          </div>
-                        </div>
-                      )
-                    }
-                  )}
-                 
-                </div>
-=======
-                  <div>
+                  <div className="flex flex-col gap-y-4 mt-2">
                     {getData(qualificationsData, "experience").data.map(
                       (item, index) => {
                         const { university, role, years } = item;
                         return (
-                          <div key={index}>
+                          <div
+                            className="flex gap-x-8 group bg-green-50 dark:bg-slate-800 p-4 rounded-xl"
+                            key={index}
+                          >
+                            <div className="h-[82px] w-[1px] bg-border relative ml-2">
+                              <div className="w-[11px] h-[11px] bg-primary rounded-full absolute top-[-5px] -left-[5px] group-hover:translate-y-[84px] transition-all duration-700"></div>
+                            </div>
                             <div>
-                              <div>{university}</div>
-                              <div>{role}</div>
-                              <div>{years}</div>
+                              <div className="font-semibold text-xl leading-none mb-4 dark:text-slate-100 ">
+                                {university}
+                              </div>
+                              <div className="text-lg leading-none text-muted-foreground mb-2 dark:text-slate-50">
+                                {role}
+                              </div>
+                              <div className="text-base font-medium dark:text-primary">
+                                {years}
+                              </div>
                             </div>
                           </div>
                         );
                       }
                     )}
                   </div>
->>>>>>> 51754713506d4db52faab801e8709566143f4f74
                 </div>
               </TabsContent>
               <TabsContent value="skills">Skill Info</TabsContent>
