@@ -151,7 +151,11 @@ const About = () => {
                     })}
                   </div>
                   <div className="flex flex-col gap-y-2">
+<<<<<<< HEAD
                     <div className="text-primary"> Services </div>
+=======
+                    <div className="text-primary">Skills </div>
+>>>>>>> 51754713506d4db52faab801e8709566143f4f74
                     <div className="border-b border-border"></div>
                     <div className="">Infus, Care Giver and Care Taker</div>
                   </div>
@@ -168,6 +172,7 @@ const About = () => {
                       {getData(qualificationsData, "experience").title}
                     </h4>
                   </div>
+<<<<<<< HEAD
                 <div className="flex flex-col gap-y-4 mt-2">
                   {getData(qualificationsData, "experience").data.map(
                     (item, index) => {
@@ -188,6 +193,24 @@ const About = () => {
                   )}
                  
                 </div>
+=======
+                  <div>
+                    {getData(qualificationsData, "experience").data.map(
+                      (item, index) => {
+                        const { university, role, years } = item;
+                        return (
+                          <div key={index}>
+                            <div>
+                              <div>{university}</div>
+                              <div>{role}</div>
+                              <div>{years}</div>
+                            </div>
+                          </div>
+                        );
+                      }
+                    )}
+                  </div>
+>>>>>>> 51754713506d4db52faab801e8709566143f4f74
                 </div>
               </TabsContent>
               <TabsContent value="skills">Skill Info</TabsContent>
