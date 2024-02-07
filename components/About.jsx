@@ -7,6 +7,7 @@ import {
   PhoneCallIcon,
   Calendar,
   GraduationCapIcon,
+  Briefcase,
 } from "lucide-react";
 
 const infoData = [
@@ -34,7 +35,7 @@ const infoData = [
 
 const qualificationsData = [
   {
-    title: "Educational",
+    title: "educational",
     data: [
       {
         university: "Universitas Respati Yogyakarta",
@@ -54,21 +55,21 @@ const qualificationsData = [
     ],
   },
   {
-    title: "Experience",
+    title: "experience",
     data: [
       {
         university: "Rumah Sakit Respati Yogyakarta",
-        qualification: "Perawat",
+        role: "Perawat",
         years: "2015 - 2019",
       },
       {
         university: "Rumah Sakit Respati Yogyakarta",
-        qualification: "Perawat",
+        role: "Perawat",
         years: "2015 - 2019",
       },
       {
         university: "Rumah Sakit Respati Yogyakarta",
-        qualification: "Perawat",
+        role: "Perawat",
         years: "2015 - 2019",
       },
     ],
@@ -91,6 +92,9 @@ const skillData = [
   },
 ];
 
+const getData = (data, key) => {
+  return data.find((item) => item.title === key);
+};
 const About = () => {
   return (
     <section className="md:h-[868px] pb-12 md:py-10 mt-10 md:mt-1">
@@ -136,17 +140,55 @@ const About = () => {
                   <div className="grid xl:grid-cols-2 gap-4 mb-12 ">
                     {infoData.map((item, index) => {
                       return (
-                        <div key={index} className="flex gap-x-4 mx-auto xl:mx-0">
+                        <div
+                          key={index}
+                          className="flex gap-x-4 mx-auto xl:mx-0"
+                        >
                           <div className="text-primaty">{item.icon}</div>
                           <div>{item.text}</div>
                         </div>
                       );
                     })}
                   </div>
+                  <div className="flex flex-col gap-y-2">
+                    <div className="text-primary"> Services </div>
+                    <div className="border-b border-border"></div>
+                    <div className="">Infus, Care Giver and Care Taker</div>
+                  </div>
                 </div>
               </TabsContent>
               <TabsContent value="qualifications">
-                Qualifications Info
+                <div className="">
+                  <h3 className="h3 mb-4 text-center xl:text-left">
+                    My Awsome Journey
+                  </h3>
+                  <div className="flex gap-x-4 items-center text-[22px] text-primary">
+                    <Briefcase />
+                    <h4 className="capitalize font-medium">
+                      {getData(qualificationsData, "experience").title}
+                    </h4>
+                  </div>
+                <div className="flex flex-col gap-y-4 mt-2">
+                  {getData(qualificationsData, "experience").data.map(
+                    (item, index) => {
+                      const {university, role, years} = item;
+                      return (
+                        <div className="flex gap-x-8 group bg-yellow-100 dark:bg-slate-800 p-4 rounded-xl" key={index}>
+                          <div className="h-[82px] w-[1px] bg-border relative ml-2">
+                            <div className="w-[11px] h-[11px] bg-primary rounded-full absolute top-[-5px] -left-[5px] group-hover:translate-y-[84px] transition-all duration-700"></div>
+                          </div>
+                          <div>
+                            <div className="font-semibold text-xl leading-none mb-4 dark:text-slate-100 ">{university}</div>
+                            <div className="text-lg leading-none text-muted-foreground mb-2 dark:text-slate-50">{role}</div>
+                            <div className="text-base font-medium dark:text-primary" >{years}</div>
+                          </div>
+                        </div>
+                      )
+                    }
+                  )}
+                 
+                </div>
+                </div>
               </TabsContent>
               <TabsContent value="skills">Skill Info</TabsContent>
             </div>
