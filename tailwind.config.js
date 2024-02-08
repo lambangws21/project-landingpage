@@ -12,10 +12,12 @@ module.exports = {
     container: {
       center: true,
       padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-        "ipad": "768px"
-      },
+    },
+    screens: {
+      xl : "1400px",
+      sm: "640px",
+      md: "768px",
+      lg : "1024px",
     },
     extend: {
       colors: {
