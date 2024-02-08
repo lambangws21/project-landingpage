@@ -97,15 +97,15 @@ const getData = (data, key) => {
 };
 const About = () => {
   return (
-    <section className="md:h-[868px] pb-12 md:py-10 mt-10 md:mt-1">
+    <section className= "container xl:h-[868px] pb-12 xl:py-10 xl:mt-1">
       <div className="container mx-auto">
-        <h2 className="about-section mb-8 xl:mb-16 text-center ">About Us</h2>
+        <h2 className="title-section mb-8 xl:mb-16 text-center ">About Us</h2>
       </div>
       {/* image */}
       <div className="flex flex-col xl:flex-row">
         <div className="hidden xl:flex flex-1 relative">
           <NersImg
-            containerStyles="bg-about_light dark:bg-about_dark w-[505px] h-[505px] relative bg-no-repeat"
+            containerStyles="bg-about_light dark:bg-about_dark w-[510px] h-[510px] relative bg-no-repeat"
             imgSrc="/about/about-image.svg"
           />
         </div>
@@ -126,7 +126,7 @@ const About = () => {
                 Skills
               </TabsTrigger>
             </TabsList>
-            <div className="text-lg mt-12 md:mt-8">
+            <div className="text-lg mt-12 lg:mt-8">
               <TabsContent value="personal">
                 <div className="text-center xl:text-left">
                   <h3 className="h3 mb-4">
@@ -163,7 +163,7 @@ const About = () => {
                     My Awsome Journey
                   </h3>
                   {/* data pengalaman dan edukasional */}
-                  <div className="grid lg:grid-cols-2 gap-y-8">
+                  <div className="grid lg:grid-cols-2 gap-x-8 ">
                     <div className="flex flex-col gap-y-6">
                       <div className="flex gap-x-4 items-center text-[22px] text-primary">
                         <Briefcase />
@@ -253,10 +253,10 @@ const About = () => {
                         const { name } = item;
                         return (
                           <div
-                            className="w-2/4 text-center xl:text-left mx-auto xl:mx-0"
+                            className=" text-center xl:text-left mx-auto xl:mx-0"
                             key={index}
                           >
-                            <div className="font-medium text-lg leading-normal list-item text-muted-foreground mb-2 dark:hover:text-primary/95 dark:text-slate-50">
+                            <div className="font-medium text-lg leading-normal lg:list-item  p-4 text-muted-foreground mb-2 dark:hover:text-primary/95 dark:text-slate-50">
                               {name}
                             </div>
                           </div>
