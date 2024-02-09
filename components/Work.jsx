@@ -1,9 +1,12 @@
 "use client";
+
 import Link from "next/link";
 import { Button } from "./ui/button";
+import { Swiper, SwiperSlide } from "swiper/react";
 // swipper styles
+
 import "swiper/css";
-import "swiper/css/navigation";
+import "swiper/css/pagination";
 // requred modules
 import { Pagination } from "swiper/modules";
 
@@ -63,8 +66,24 @@ const Work = () => {
           </Link>
         </div>
         {/* slider */}
-        <div>
-            
+        <div className="xl:max-w-[1000px] xl:absolute right-0 top-0">
+          <Swiper
+            className="h-[480px]"
+            slideperview={1}
+            breakpoints={{ 640: { slidesPerView: 2 } }}
+            spacebetween={30}
+            modules={[Pagination]}
+            Pagination={{ clickable: true }}
+          >
+            {/* hanya menampilkankan 4 items slide */}
+            {projectData.slice(0.4).map((project, index) => {
+              return (
+                <SwiperSlide key={index}>
+                  <ProjectCard project={project} />
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
         </div>
       </div>
     </section>
