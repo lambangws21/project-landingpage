@@ -19,7 +19,7 @@ const Hero = () => {
         <div className="flex justify-between gap-x-8">
           {/*Text*/}
           <div className="flex flex-col items-center justify-center mx-auto max-w-[700px] md:mx-0 text-center md:text-right">
-            <h1 className="text-7xl md:text-8xl font-bold md:text-left leading-[1.1] text-center">
+            <h1 className="text-7xl lg:text-8xl font-bold lg:text-left leading-[1.1] text-center">
               Your <span className="text-primary">Health</span>, <br /> is Our
               Top Priority.
             </h1>
