@@ -68,17 +68,17 @@ const Work = () => {
         {/* slider */}
         <div className="xl:max-w-[1000px] xl:absolute right-0 top-0">
           <Swiper
-            className="h-[480px]"
+            className="h-[480px] w-[750px] gap-y-4"
             slideperview={1}
             breakpoints={{ 640: { slidesPerView: 2 } }}
-            spacebetween={30}
+            spacebetween={60}
             modules={[Pagination]}
-            Pagination={{ clickable: true }}
+            pagination={{ clickable: true }}
           >
             {/* hanya menampilkankan 4 items slide */}
             {projectData.slice(0.4).map((project, index) => {
               return (
-                <SwiperSlide key={index}>
+                <SwiperSlide key={index} >
                   <ProjectCard project={project} />
                 </SwiperSlide>
               );

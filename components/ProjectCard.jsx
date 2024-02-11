@@ -6,25 +6,31 @@ import { Badge } from "./ui/badge";
 
 const ProjectCard = ({ project }) => {
   return (
-    <Card classNameg='group overflow-hidden relative '>
+    <Card className="group overflow-hidden relative ">
       <CardHeader>
-        <div className="relative w-full h-[300px] flex items-center justify-center bg-primary/10 dark:bg-accent xl:bg-[110%] xl:dark:bg-[110%] xl:bg-no-repeat overflow-hidden"> 
+        <div className="relative w-full h-[250px] flex items-center justify-center bg-primary/10 dark:bg-accent xl:bg-[115%] xl:dark:bg-[115%] xl:bg-no-repeat overflow-hidden  ">
           <Image
             className="absolute bottom-0 shadow-2xl"
             src={project.image}
-            width={247}
+            width={240}
             height={250}
             alt=""
             priority
           />
+          {/* btn link*/}
+          <div className="flex gap-x-4">
+            <Link href={project.link} className="bg-primary/60 w-[54px] h-[54px] rounded-full flex justify-center items-center scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transiton-all duration-200 text-white"><Link2Icon /></Link>
+            <Link href={project.facebook} className="bg-primary/60 w-[54px] h-[54px] rounded-full flex justify-center items-center scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transiton-all duration-300 text-white"><Facebook /></Link>
+          </div>
+
         </div>
       </CardHeader>
-      <div className="h-full px-8 py-6">
+      <div className="h-full px-7 py-6">
         <Badge className="uppercase text-sm font-medium mb-2 absolute top-4 left-5">
           {project.category}
         </Badge>
         <h4 className="h4 mb-1">{project.name}</h4>
-        <p className="text-muted-foreground text-lg">{project.discription}</p>
+        <p className="text-muted-foreground text-md">{project.discription}</p>
       </div>
     </Card>
   );
