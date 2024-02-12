@@ -14,10 +14,10 @@ module.exports = {
       padding: "2rem",
     },
     screens: {
-      xl : "1400px",
+      xl: "1400px",
       sm: "640px",
       md: "768px",
-      lg : "1024px",
+      lg: "1024px",
     },
     extend: {
       colors: {
@@ -83,6 +83,8 @@ module.exports = {
         dots_dark: "url('/dots-dark.svg')",
         about_light: "url ('/about/about-light.svg')",
         about_dark: "url('/about/about-dark.svg')",
+        contact_light: "url('/contact/contact-light.svg')",
+        contact_dark: "url('/contact/contact-dark.svg')",
       },
     },
   },

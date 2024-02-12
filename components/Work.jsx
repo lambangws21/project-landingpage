@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 import { Swiper, SwiperSlide } from "swiper/react";
 // swipper styles
 
@@ -20,12 +20,12 @@ const projectData = [
     discription:
       "Pelayanan nursing care adalah perawatan holistik yang memberikan perhatian penuh pada pasien.",
     link: "/",
-    facebook: "/",
+    facebook: "/facebook.com",
   },
   {
     image: "/work/3.png",
-    category: "Home Care",
-    name: "Nursing Care",
+    category: "Infusion Care",
+    name: "Infusion Care",
     discription:
       "Pelayanan nursing care adalah perawatan holistik yang memberikan perhatian penuh pada pasien.",
     link: "/",
@@ -66,19 +66,19 @@ const Work = () => {
           </Link>
         </div>
         {/* slider */}
-        <div className="xl:max-w-[1000px] xl:absolute right-0 top-0">
+        <div className="xl:max-w-[1000px] xl:absolute right-6 top-0">
           <Swiper
-            className="h-[480px] w-[750px] gap-y-4"
+            className="h-[480px] w-[820px] gap-y-4"
             slideperview={1}
-            breakpoints={{ 640: { slidesPerView: 2 } }}
-            spacebetween={60}
+            breakpoints={{ 340: { slidesPerView: 2 } }}
+            spaceBetween={30}
             modules={[Pagination]}
             pagination={{ clickable: true }}
           >
             {/* hanya menampilkankan 4 items slide */}
             {projectData.slice(0.4).map((project, index) => {
               return (
-                <SwiperSlide key={index} >
+                <SwiperSlide key={index}>
                   <ProjectCard project={project} />
                 </SwiperSlide>
               );
